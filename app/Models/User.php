@@ -12,6 +12,11 @@ class User extends Authenticatable implements MustVerifyEmail
 {
     use HasApiTokens, HasFactory, Notifiable;
 
+    protected $withCount = [
+        'notifications',
+        'unreadNotifications',
+    ];
+
     /**
      * The attributes that are mass assignable.
      *

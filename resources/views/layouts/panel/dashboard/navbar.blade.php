@@ -4,13 +4,12 @@
     <button class="btn btn-icon btn-transparent-dark order-1 order-lg-0 me-2 ms-lg-2 me-lg-0" id="sidebarToggle">
         <i class="fas fa-bars"></i>
     </button>
-    <!-- Navbar Brand-->
-    <!-- * * Tip * * You can use text or an image for your navbar brand.-->
-    <!-- * * * * * * When using an image, we recommend the SVG format.-->
-    <!-- * * * * * * Dimensions: Maximum height: 32px, maximum width: 240px-->
+
     <a class="navbar-brand pe-3 ps-4 ps-lg-2" href="{{ route('panel.dashboard') }}">{{ config('app.name') }}</a>
     <!-- Navbar Items-->
     <ul class="navbar-nav align-items-center ms-auto">
+        <!-- Notifications Dropdown-->
+        @livewire('notification-center')
         <!-- User Dropdown-->
         <li class="nav-item dropdown no-caret dropdown-user me-3 me-lg-4">
             <a class="btn btn-icon btn-transparent-dark dropdown-toggle" id="navbarDropdownUserImage"
